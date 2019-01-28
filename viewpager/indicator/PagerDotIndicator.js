@@ -2,7 +2,6 @@
  * Created by tangzhibin on 16/3/28.
  */
 
-'use strict';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View, ViewPropTypes } from 'react-native';
@@ -45,12 +44,12 @@ export default class PagerDotIndicator extends Component {
   }
 
   render() {
-    let { pageCount, dotStyle, selectedDotStyle } = this.props;
+    const { pageCount, dotStyle, selectedDotStyle } = this.props;
     if (pageCount <= 0) return null;
     if (this.props.hideSingle && pageCount == 1) return null;
-    let dotsView = [];
+    const dotsView = [];
     for (let i = 0; i < pageCount; i++) {
-      let isSelect = i === this.state.selectedIndex;
+      const isSelect = i === this.state.selectedIndex;
       dotsView.push(
         <View
           style={[
@@ -62,11 +61,12 @@ export default class PagerDotIndicator extends Component {
         />
       );
     }
+
     return (
-      <View {...this.props} style={[styles.container, this.props.style]}>
-        {this.props.left}
-        {dotsView}
-        {this.props.right}
+      <View style={[styles.container, this.props.style]}>
+        {this.props.left || null}
+        <View style={{ flexDirection: 'row' }}>{dotsView}</View>
+        {this.props.right || null}
       </View>
     );
   }
