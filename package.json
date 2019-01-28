@@ -1,14 +1,22 @@
 {
-  "name": "rn-viewpager",
-  "version": "1.2.9",
+  "name": "viewpager-rn",
+  "version": "0.0.0-development",
   "description": "ViewPager component for react-native, same api on both android and ios.",
   "main": "index.js",
+  "files": [
+    "viewpager",
+    "README.md",
+    "index.js",
+    "index.d.ts"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1;"
+    "test": "echo \"Error: no test specified\" && exit 1;",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zbtang/React-Native-ViewPager.git"
+    "url": "https://github.com/gaithoben/React-Native-ViewPager.git"
   },
   "keywords": [
     "react-native-component",
@@ -27,10 +35,18 @@
     "tab-bar",
     "tab-view"
   ],
-  "author": "ZubinTang",
+  "author": "gaithoben",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zbtang/React-Native-ViewPager/issues"
+    "url": "https://github.com/gaithoben/React-Native-ViewPager/issues"
   },
-  "homepage": "https://github.com/zbtang/React-Native-ViewPager#readme"
+  "homepage": "https://github.com/gaithoben/React-Native-ViewPager#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "semantic-release": "^15.13.3"
+  }
 }
